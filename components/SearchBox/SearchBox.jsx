@@ -13,6 +13,11 @@ class SearchBox extends React.Component {
 		this.setState({ searchInput: event.target.value });
 	}
 
+	submitSearch(event) {
+		event.preventDefault();
+		this.props.submitFn(this.state.searchInput);
+	}
+
 	render() {
 		return (
 			<div>
@@ -22,7 +27,7 @@ class SearchBox extends React.Component {
 								 onChange={this.searchInputChanged.bind(this)}
 								 value={this.state.searchInput}/>
 					<button type="submit"
-									onClick={this.props.submitFn.bind(this, this.state.searchInput)}>
+									onClick={this.submitSearch.bind(this)}>
 						Search
 					</button>
 			</div>
