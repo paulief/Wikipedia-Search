@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SearchBox from '../SearchBox/SearchBox.jsx'
+import SearchResultsContainer from '../SearchResults/SearchResultsContainer.jsx'
 
 class App extends React.Component {
 
@@ -10,7 +11,10 @@ class App extends React.Component {
 
   render() {
     return (
-    	<SearchBox submitFn={this.performSearch}/>
+    	<div>
+    		<SearchBox submitFn={this.performSearch}/>
+    		<SearchResultsContainer results={["bla1", "bla2"]}/>
+    	</div>
     );
   }
 }
