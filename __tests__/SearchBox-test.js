@@ -11,16 +11,16 @@ describe('<SearchBox/>', () => {
 			<SearchBox/>
 		);
 
-		const inputEl = TestUtils.findRenderedDOMComponentWithTag(searchBox, 'input');
+		const inputElement = TestUtils.findRenderedDOMComponentWithTag(searchBox, 'input');
 
 		// state should start with empty string
 		expect(searchBox.state).toEqual({ searchInput: '' });
-		expect(inputEl.value).toEqual('');
+		expect(inputElement.value).toEqual('');
 
-		TestUtils.Simulate.change(inputEl, { target: { value: 'new' } });
+		TestUtils.Simulate.change(inputElement, { target: { value: 'new' } });
 
 		// state should now be updated
 		expect(searchBox.state).toEqual({ searchInput: 'new' });
-		expect(inputEl.value).toEqual('new');
+		expect(inputElement.value).toEqual('new');
 	})
 });
