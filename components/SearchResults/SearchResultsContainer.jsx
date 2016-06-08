@@ -6,7 +6,7 @@ class SearchResultsContainer extends React.Component {
 		return (
 			<ul>
 				{this.props.results.map((result) => {
-					return <SearchResult result={result} key={result}/>
+					return <SearchResult result={result.pageid} key={result.pageid}/>
 				})}
 			</ul>
 		);
