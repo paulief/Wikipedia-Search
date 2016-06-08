@@ -3,9 +3,14 @@ import ReactDOM from 'react-dom';
 import SearchBox from '../SearchBox/SearchBox.jsx'
 
 class App extends React.Component {
+
+	performSearch(searchInput) {
+		console.log('INPUT = ' + searchInput);
+	}
+
   render() {
     return (
-    	<SearchBox/>
+    	<SearchBox submitFn={this.performSearch}/>
     );
   }
 }
