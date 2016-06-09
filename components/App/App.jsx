@@ -13,8 +13,8 @@ class App extends React.Component {
   }
 
 	performSearch(searchInput) {
-    wikipediaService.searchFor(searchInput)
-                    .then(this.updateResults.bind(this));
+    return wikipediaService.searchFor(searchInput)
+            .then(this.updateResults.bind(this));
 	}
 
   updateResults(results) {
