@@ -4,11 +4,11 @@ import SearchResult from './SearchResult.jsx';
 class SearchResultsContainer extends React.Component {
 	render() {
 		return (
-			<ul>
+			<div>
 				{this.props.results.map((result) => {
-					return <SearchResult result={result.pageid} key={result.pageid}/>
+					return <SearchResult result={result} key={result.pageid}/>
 				})}
-			</ul>
+			</div>
 		);
 	}
 }
