@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import SearchBox from '../SearchBox/SearchBox.jsx';
 import SearchResultsContainer from '../SearchResults/SearchResultsContainer.jsx';
 import wikipediaService from '../../lib/wikipediaService.js';
@@ -32,4 +31,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App/>, document.getElementById('app'));
+export default App;
