@@ -6,6 +6,9 @@ class SearchBox extends React.Component {
 		this.state = {
 			searchInput: ''
 		};
+
+		this.searchInputChanged = this.searchInputChanged.bind(this);
+		this.submitSearch       = this.submitSearch.bind(this);
 	}
 
 	// update state as user inputs search
@@ -24,10 +27,10 @@ class SearchBox extends React.Component {
 				<h1>Wikipedia Search</h1>
 					<input type="text" 
 								 placeholder="Search Wikipedia"
-								 onChange={this.searchInputChanged.bind(this)}
+								 onChange={this.searchInputChanged}
 								 value={this.state.searchInput}/>
 					<button type="submit"
-									onClick={this.submitSearch.bind(this)}>
+									onClick={this.submitSearch}>
 						Search
 					</button>
 			</div>

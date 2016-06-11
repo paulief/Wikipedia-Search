@@ -10,11 +10,14 @@ class App extends React.Component {
     this.state = {
       results: []
     };
+
+    this.updateResults = this.updateResults.bind(this);
+    this.performSearch = this.performSearch.bind(this);
   }
 
 	performSearch(searchInput) {
     return wikipediaService.searchFor(searchInput)
-            .then(this.updateResults.bind(this));
+            .then(this.updateResults);
 	}
 
   updateResults(results) {
@@ -24,7 +27,7 @@ class App extends React.Component {
   render() {
     return (
     	<div>
-    		<SearchBox submitFn={this.performSearch.bind(this)}/>
+    		<SearchBox submitFn={this.performSearch}/>
     		<SearchResultsContainer results={this.state.results}/>
     	</div>
     );
