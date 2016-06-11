@@ -15,16 +15,8 @@ const API_URL =  'http://www.wikipedia.org/w/api.php?action=query&format=json' +
 const defaultResponse = {
 	query: {
 		pages: {
-			1: {
-				pageid: 1,
-				title: 'Page 1',
-				extract: 'Some words'
-			},
-			2: {
-				pageid: 2,
-				title: 'Page 2',
-				extract: 'Some other words'
-			}
+			1: { pageid: 1, title: 'Page 1', extract: 'Some words' },
+			2: { pageid: 2, title: 'Page 2', extract: 'Some other words' }
 		}
 	}
 };
