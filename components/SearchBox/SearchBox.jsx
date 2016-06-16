@@ -1,5 +1,7 @@
 import React from 'react';
 
+require('./SearchBox.scss');
+
 class SearchBox extends React.Component {
 	constructor() {
 		super();
@@ -23,7 +25,7 @@ class SearchBox extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className="search-box">
 				<h1>Wikipedia Search</h1>
 					<form id="searchForm" onSubmit={this.submitSearch}>
 						<input type="text" 
