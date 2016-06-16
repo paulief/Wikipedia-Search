@@ -25,14 +25,15 @@ class SearchBox extends React.Component {
 		return (
 			<div>
 				<h1>Wikipedia Search</h1>
-					<input type="text" 
-								 placeholder="Search Wikipedia"
-								 onChange={this.searchInputChanged}
-								 value={this.state.searchInput}/>
-					<button type="submit"
-									onClick={this.submitSearch}>
-						Search
-					</button>
+					<form id="searchForm" onSubmit={this.submitSearch}>
+						<input type="text" 
+									 placeholder="Search Wikipedia"
+									 onChange={this.searchInputChanged}
+									 value={this.state.searchInput}/>
+						<button type="submit">
+							Search
+						</button>
+					</form>
 			</div>
 		);
 	}

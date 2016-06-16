@@ -36,8 +36,8 @@ describe('<SearchBox/>', () => {
 		// set value of input
 		searchBox.setState({ searchInput: 'called search' });
 
-		const submitBtn = TestUtils.findRenderedDOMComponentWithTag(searchBox, 'button');
-		TestUtils.Simulate.click(submitBtn);
+		const submitForm = TestUtils.findRenderedDOMComponentWithTag(searchBox, 'form');
+		TestUtils.Simulate.submit(submitForm);
 
 		expect(submitFn).toBeCalledWith('called search');
 	});
